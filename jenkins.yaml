@@ -1,5 +1,5 @@
 jenkins:
-  systemMessage: 'Jenkins configured using CloudBees CI CasC - v2'
+  systemMessage: 'Jenkins configured using CloudBees CI CasC - v4'
 unclassified:
   hibernationConfiguration:
     activities:
@@ -23,6 +23,9 @@ unclassified:
               credentialsId: "cloudbees-ci-workshop-github-app"
               repoOwner: "john-m-walker"
               repository: "pipeline-library"
+notificationConfiguration:
+  enabled: true
+  router: "localOnlyFallback"
 kube:
   podTemplatesConfiguration:
     templates:
@@ -70,3 +73,14 @@ credentials:
           id: "cloudbees-ci-workshop-github-app"
           owner: "john-m-walker"
           privateKey: "${gitHubAppPrivateKey}"
+cloudbees-slack-integration:
+  config:
+    slackToken: "${slackToken}"
+    slackWorkspace: "T010A455W77"
+    users:
+    - id: "johnmwalker"
+      jenkins: "johnmwalker"
+      optedIn: true
+      scmId: "johnmwalker"
+      slack: "john.walker@primetherapeutics.com"
+      slackWorkspace: "T010A455W77"
