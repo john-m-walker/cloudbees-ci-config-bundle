@@ -82,5 +82,5 @@ cloudbees-slack-integration:
       jenkins: "johnmwalker"
       optedIn: true
       scmId: "johnmwalker"
-      slack: "REPLACE_USER_EMAIL"
+      slack: "john.walker@primetherapeutics.com"
       slackWorkspace: "T010A455W77"
